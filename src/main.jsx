@@ -11,6 +11,8 @@ import Register from './Components/Register.jsx';
 import { StrictMode } from 'react';
 import { AuthContext } from './Contexts/AuthContext.jsx';
 import AuthProvider from './Contexts/AuthProvider.jsx';
+import Orders from './Orders.jsx';
+import PrivateRoutes from './Routes/PrivateRoutes.jsx';
 
 
  
@@ -36,6 +38,10 @@ Component: Home
 
 Component: Register
 },
+{
+  path:'orders',
+element: <PrivateRoutes><Orders></Orders></PrivateRoutes>
+}
 ],
 }
 ]);
